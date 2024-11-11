@@ -1,0 +1,82 @@
+Lucy Pre-interview Questions
+
+1. Remove duplicate
+   Jika diberikan array [12, 8, 78, 10, 8, 10] hilangkan semua nominal yang duplikat
+
+2. Sets
+   Given the following line of code
+
+   ```
+   const mySet = new Set([1,2,3,4,5])
+   ```
+
+   apa output dari mySet.get(6)?
+
+3. Map vs Set
+   Jelaskan dalam satu paragraf perbedaan dan perbandingan pengunaan Map dan Set.
+   BONUS: Buat lah wrapper class Set dengan hanya menggunakan Map
+
+4. JavaScript Classes
+   Buatlah suatu class "Hewan" yang mempunyai karakteristik "julukan", "nama latin", dan "usia" agar kode di bawah dapat tereksekusi tanpa error
+   BONUS: Jelaskan
+
+```
+const hewan1 = new Hewan
+hewan1.julukan = "Si Sirip Biru"
+hewan1.nama_latin = "Thunnus Albacares"
+hewan1.usia = 1.342 // dalam tahun
+
+console.log(hewan1.julukan) // output: Si Sirip Biru
+console.log(hewan1.nama_latin) // output: Thunnus Albacares
+console.log(hewan1.usia) // output: 1.342
+```
+
+5. Spread operator (JS only)
+   Berikan contoh pengunaan syntax "..." di JavaScript untuk
+   a. Array
+   b. Object
+
+6. Async & Await
+   Apa output dari program tersebut (urutan musti benar)
+
+```
+console.log("Hello");
+setTimeout(() => {
+  console.log("Apa kabar")
+}, 1000);
+(async () => {
+  console.log("Aku baik2 saja")
+})()
+console.log("Aku tidak baik2 saja");
+```
+
+7. Async & Await 2
+   Implementasikan function getUserAndCompany agar function fetchUser dan fetchCompany berjalan secara bersamaan
+   JANGAN MENGUBAH function fetchUser dan fetchCompany!
+
+```
+async function fetchUser { // fake user fetching, don't touch this function
+return await new Promise((r) => setTimeout(() => r({id: "User 1"}), 2000)
+}
+async function fetchCompany { // fake company fetching, don't change this function
+return await new Promise((r) => setTimeout(() => r({id: "Company 1"})), 1000)
+}
+
+async function fetchUserAndCompany() {
+    //  code here
+}
+```
+
+8. Stack (recommended in TypeScript)
+   Buatkan implementasi class Stack agar dapat melakukan aksi getValue(), push(), remove()
+   BONUS: Gunakan TypeScript dan buatkan class Stack yang generic
+
+9. TypeScript Functions (recommended in TypeScript)
+
+```
+function getOddNumbers(numbers, condition) {
+    return numbers.filter(condition)
+}
+```
+
+Apakah yang di masukan ke dalam parameter condition. Berikan contoh.
